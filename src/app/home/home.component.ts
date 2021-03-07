@@ -71,8 +71,6 @@ export class HomeComponent implements OnInit {
           id: this.generateUID(),
           result: 'YES',
         };
-        console.log(Test);
-        console.log('YES');
         eventDispatcher.next({
           type: ActionTypes.CREATE_TEST,
           payload: Test,
@@ -86,8 +84,6 @@ export class HomeComponent implements OnInit {
       id: this.generateUID(),
       result: 'NO',
     };
-    console.log(Test);
-    console.log('NO');
     eventDispatcher.next({
       type: ActionTypes.CREATE_TEST,
       payload: Test,

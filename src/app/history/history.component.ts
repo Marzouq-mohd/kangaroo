@@ -13,7 +13,6 @@ export class HistoryComponent implements OnInit {
     store.subscribe((state: any) => {
       const { tests } = state;
       this.tests = tests;
-      console.log(this.tests);
     });
   }
 
