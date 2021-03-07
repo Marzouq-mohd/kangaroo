@@ -1,16 +1,32 @@
 <header class="header">
   <nav class="nav">
-    <div class="nav-logo">
-      <a alt="logo">kTest</a>
+    <div>
+      <a class="nav__logo" [routerLink]="['/home']" alt="logo">kTest</a>
     </div>
     <ul class="nav-menu">
-      <li class="nav-menu--item">
-        <a [routerLink]="['/home']" routerLinkActive="active">Home</a>
+      <li class="nav-menu__item">
+        <a [routerLink]="['/home']" routerLinkActive="nav-menu__link--active" class="nav-menu__link">Home</a>
       </li>
-      <li class="nav-menu--item">
-        <a [routerLink]="['/history']" routerLinkActive="active">History</a>
+      <li class="nav-menu__item">
+        <a [routerLink]="['/history']" routerLinkActive="nav-menu__link--active" class="nav-menu__link">History</a>
       </li>
     </ul>
+    <div class="nav-menu--mobile-only">
+      <div class="nav-menu__toggle">
+        <input class="checkbox" type="checkbox" />
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <ul id="" class="nav-menu">
+          <li class="nav-menu__item">
+            <a [routerLink]="['/home']" routerLinkActive="nav-menu__link--active" class="nav-menu__link">Home</a>
+          </li>
+          <li class="nav-menu__item">
+            <a [routerLink]="['/history']" routerLinkActive="nav-menu__link--active" class="nav-menu__link">History</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>
 <router-outlet></router-outlet>

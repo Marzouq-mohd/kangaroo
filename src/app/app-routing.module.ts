@@ -8,13 +8,11 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'history', component: HistoryComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  // { path: '**', redirectTo: 'PageNotFoundComponent ' },
+  { path: '**', redirectTo: '/home' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {
-  static components = [HomeComponent, HistoryComponent];
-}
+export class AppRoutingModule {}

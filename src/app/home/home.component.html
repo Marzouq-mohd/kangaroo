@@ -1,41 +1,41 @@
-<section>
+<section class="section">
   <div class="container">
     <div class="form">
       <form [formGroup]="kangarooCheck"
         (ngSubmit)="kangarooCheck.valid && kangaroo(kangarooCheck.value.x1,kangarooCheck.value.v1,kangarooCheck.value.x2,kangarooCheck.value.v2)"
         #ngForm="ngForm">
-        <div class="form-groups">
-          <div class="form-group">
-            <label for="">x1(kangaroo 1's position)</label>
-            <input class="form-control" type="number" formControlName="x1" name="x1" min="0">
+        <div class="form__groups">
+          <div class="form__group">
+            <label class="form__label" for="">x1(kangaroo 1's position)</label>
+            <input class="form__control" type="number" formControlName="x1" name="x1" min="0">
             <small *ngIf="kangarooCheck.controls.x1.invalid && ngForm.submitted" class="warning-message">x1 is
               required</small>
           </div>
-          <div class="form-group">
-            <label for="">v1(kangaroo 1's speed)</label>
-            <input class="form-control" type="number" formControlName="v1" name="v1" min="1" max="10000">
+          <div class="form__group">
+            <label class="form__label" for="">v1(kangaroo 1's speed)</label>
+            <input class="form__control" type="number" formControlName="v1" name="v1" min="1" max="10000">
             <small *ngIf="kangarooCheck.controls.v1.invalid && ngForm.submitted" class="warning-message">v1 is
               required</small>
           </div>
-          <div class="form-group">
-            <label for="">x2(kangaroo 2's position)</label>
-            <input class="form-control" type="number" formControlName="x2" name="x2">
+          <div class="form__group">
+            <label class="form__label" for="">x2(kangaroo 2's position)</label>
+            <input class="form__control" type="number" formControlName="x2" name="x2" min="0">
             <small *ngIf="kangarooCheck.controls.x2.invalid && ngForm.submitted" class="warning-message">x2 is
               required</small>
           </div>
-          <div class="form-group">
-            <label for="">v2(kangaroo 2's speed)</label>
-            <input class="form-control" type="number" formControlName="v2" name="v2" min="1" max="10000">
+          <div class="form__group">
+            <label class="form__label" for="">v2(kangaroo 2's speed)</label>
+            <input class="form__control" type="number" formControlName="v2" name="v2" min="1" max="10000">
             <small *ngIf="kangarooCheck.controls.v2.invalid && ngForm.submitted" class="warning-message">v2 is
               required</small>
           </div>
         </div>
-        <div class="form-groups-control">
+        <div class="form__actions">
           <div class="result">
             <h2>Result: <code>{{sameLocation}}</code></h2>
           </div>
-          <div class="form-group">
-            <button class="submit-btn" type="submit">
+          <div class="form__group">
+            <button class="btn-submit" type="submit">
               <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="feather feather-check-circle">
